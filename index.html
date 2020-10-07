@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia De autos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="container mt-5 bg-dark">
+        <div class="card ">
+            <div class="card-body">
+                <form onsubmit="addCar()" action="">
+                    <div class="form-group">
+                        <label for="brand">Marca</label>
+                        <input type="text" id="brand" placeholder="Ingrese la Marca">
+                        <label for="model">Modelo</label>
+                        <input type="text" id="model" placeholder="ingrese el Modelo">
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <input type="text" id="color" placeholder="ingrese el Color">
+                        <label for="year">Año</label>
+                        <input type="text" id="year" placeholder="Ingrese el Año">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Precio</label>
+                        <input type="text" id="price" placeholder="Ingrese el Precio $">
+                    </div>
+                    <button type="submit" class="btn btn-warning">Agregar</button>
+                    <button type="button" class="btn btn-warning" onclick="saveChange()">Guardar</button>
+                </form>
+
+                <div class="mt-2">
+                    <button class="btn btn-outline-dark" onclick="moreOld()">Más Antiguo</button>
+                    <button class="btn btn-outline-dark" onclick="moreNew()">Más Nuevo</button>
+                    <button class="btn btn-outline-dark" onclick="moreExpensive()">Mayor Costo</button>
+                    <button class="btn btn-outline-dark" onclick="moreCheap()">Menor Costo</button>
+                    <button class="btn btn-outline-dark" onclick="lookGeneral()">Vista General</button>
+                    <button class="btn btn-outline-dark" onclick="randomData()" data-toggle = "tolltip" data-placement="top" title="Agregar Datos Random">R</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <table class="table table-hover table-dark">
+            <thead>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Color</th>
+                <th>Año</th>
+                <th>$Precio</th>
+                <th>Borrar</th>
+                <th>Editar</th>
+            </thead>
+            <tbody id="table-body-id">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/js/autos.js"></script>
+</body>
+
+</html>
