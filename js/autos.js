@@ -14,7 +14,7 @@ function printCars() {
             + '<td>' + x.year + '</td>'
             + '<td>$' + x.price + '</td>'
             + '<td><button class="btn btn-warning" onclick="removeCars(' + x.id + ')">Eliminar</button></td>'
-            + '<td><button class="btn btn-warning" onclick="editDate(' + x.id + ')">Editar</button></td>'
+            + '<td><button class="btn btn-warning" onclick="editData(' + x.id + ')">Editar</button></td>'
             + '</tr>';
 
         tablebody.innerHTML += row;
@@ -60,7 +60,7 @@ function removeCars(id) {
 
 let carEdit = {};
 
-function editDate(id) {
+function editData(id) {
 
     const getbrand = document.getElementById("brand");
     const getmodel = document.getElementById("model");
@@ -125,7 +125,7 @@ function moreOld() {
                     + '<td>' + x.year + '</td>'
                     + '<td>$' + x.price + '</td>'
                     + '<td><button class="btn btn-warning" onclick="removeCars(' + x.id + ')">Eliminar</button></td>'
-                    + '<td><button class="btn btn-warning" onclick="editDate(' + x.id + ')">Editar</button></td>'
+                    + '<td><button class="btn btn-warning" onclick="editData(' + x.id + ')">Editar</button></td>'
                     + '</tr>';
                 tablebody.innerHTML += row;
             }
@@ -166,7 +166,7 @@ function moreNew() {
                     + '<td>' + x.year + '</td>'
                     + '<td>$' + x.price + '</td>'
                     + '<td><button class="btn btn-warning" onclick="removeCars(' + x.id + ')">Eliminar</button></td>'
-                    + '<td><button class="btn btn-warning" onclick="editDate(' + x.id + ')">Editar</button></td>'
+                    + '<td><button class="btn btn-warning" onclick="editData(' + x.id + ')">Editar</button></td>'
                     + '</tr>';
                 tablebody.innerHTML += row;
             }
@@ -207,7 +207,7 @@ function moreExpensive() {
                     + '<td>' + x.year + '</td>'
                     + '<td>$' + x.price + '</td>'
                     + '<td><button class="btn btn-warning" onclick="removeCars(' + x.id + ')">Eliminar</button></td>'
-                    + '<td><button class="btn btn-warning" onclick="editDate(' + x.id + ')">Editar</button></td>'
+                    + '<td><button class="btn btn-warning" onclick="editData(' + x.id + ')">Editar</button></td>'
                     + '</tr>';
                 tablebody.innerHTML += row;
             }
@@ -248,7 +248,7 @@ function moreCheap() {
                     + '<td>' + x.year + '</td>'
                     + '<td>$' + x.price + '</td>'
                     + '<td><button class="btn btn-warning" onclick="removeCars(' + x.id + ')">Eliminar</button></td>'
-                    + '<td><button class="btn btn-warning" onclick="editDate(' + x.id + ')">Editar</button></td>'
+                    + '<td><button class="btn btn-warning" onclick="editData(' + x.id + ')">Editar</button></td>'
                     + '</tr>';
                 tablebody.innerHTML += row;
             }
@@ -274,6 +274,7 @@ function randomData() {
     data_Random.forEach((x) => {
         cars.push(x);
     });
+    cont += 5;
 
     printCars();
 }
